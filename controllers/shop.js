@@ -35,7 +35,7 @@ exports.getIndex = (req, res, next) => {
       res.render('shop/index', {
         prods: products,
         pageTitle: 'Shop',
-        path: '/'
+        path: '/'        
       });
     })
     .catch(err => {
@@ -52,7 +52,7 @@ exports.getCart = async (req, res, next) => {
           res.render('shop/cart', { 
              path: '/cart', 
              pageTitle: 'Your Cart',
-             products: products 
+             products: products,
         });     
       })     
 .catch(err => console.log(err));
@@ -90,7 +90,7 @@ exports.postOrder = async (req, res, next) => {
       });
       const order = new Order({
         user: {
-          name: req.user.name,
+          email: req.user.email,
           userId: req.user
         },
         products: products
