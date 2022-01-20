@@ -87,7 +87,7 @@ app.use((error, req, res, next) => {
 });
 
 const corsOptions = {
-  origin: "https://lisawardcse341.herokuapp.com/",
+  origin: "https://lisawardcse341personalproject.herokuapp.com/",
   optionsSuccessStatus: 200
 };
 app.use(cors(corsOptions));
