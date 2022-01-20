@@ -1,4 +1,5 @@
 const path = require('path');
+const PATH = process.env.PORT || 5000;
 
 const express = require('express');
 const bodyParser = require('body-parser');
@@ -104,7 +105,7 @@ const MONGODB_URL = process.env.MONGODB_URL || "mongodb+srv://rward29:RideaBike!
 mongoose
 .connect(MONGODB_URI)
 .then(result => {  
-  app.listen(3000);
+  app.listen(PORT);
 })
 .catch( err =>{
   console.log(err);
