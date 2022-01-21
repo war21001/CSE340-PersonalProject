@@ -1,5 +1,5 @@
 const path = require('path');
-const PATH = process.env.PORT || 3000;
+const PATH = process.env.PORT || 5000;
 
 const express = require('express');
 const bodyParser = require('body-parser');
@@ -13,7 +13,7 @@ const cors = require('cors');
 const errorController = require('./controllers/error');
 const User = require('./models/user');
 
-const MONGODB_URI  = process.env.MONGODB_URI;
+const MONGODB_URI  = 'mongodb://localhost:27017';
 
 const app = express();
 const store= new MongoDBStore({
@@ -87,7 +87,7 @@ app.use((error, req, res, next) => {
 });
 
 const corsOptions = {
-  origin: "https://lwcse341personalproject.herokuapp.com/",
+  origin: "https://lisawardcse341personalproject.herokuapp.com/",
   optionsSuccessStatus: 200
 };
 app.use(cors(corsOptions));
@@ -100,7 +100,7 @@ const options = {
   family: 4
 };
 
-const MONGODB_URL = process.env.MONGODB_URL || 'mongodb://localhost:27017'
+const MONGODB_URL = process.env.MONGODB_URL || 'mongodb+srv://rward29:cse341nodejs@cluster0.hsotg.mongodb.net/test?retryWrites=true&w=majority'
 
 mongoose
 .connect(MONGODB_URI)
