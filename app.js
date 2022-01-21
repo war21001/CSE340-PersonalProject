@@ -13,7 +13,7 @@ const cors = require('cors');
 const errorController = require('./controllers/error');
 const User = require('./models/user');
 
-const MONGODB_URI  = 'mongodb://localhost:27017';
+const MONGODB_URI  = process.env.MONGODB_URI;
 
 const app = express();
 const store= new MongoDBStore({
@@ -87,7 +87,7 @@ app.use((error, req, res, next) => {
 });
 
 const corsOptions = {
-  origin: "https://lisawardcse341personalproject.herokuapp.com/",
+  origin: "https://lwcse341personalproject.herokuapp.com/",
   optionsSuccessStatus: 200
 };
 app.use(cors(corsOptions));
