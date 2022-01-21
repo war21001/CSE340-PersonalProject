@@ -100,7 +100,7 @@ const options = {
   family: 4
 };
 
-const MONGODB_URL = process.env.MONGODB_URI || 'mongodb+srv://rward29:cse341nodejs@cluster0.hsotg.mongodb.net/test?retryWrites=true&w=majority'
+const MONGODB_URL = process.env.MONGODB_URL || 'mongodb+srv://rward29:cse341nodejs@cluster0.hsotg.mongodb.net/test?retryWrites=true&w=majority'
 
 mongoose
 .connect(MONGODB_URI)
