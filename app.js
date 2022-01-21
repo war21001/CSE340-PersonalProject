@@ -13,8 +13,8 @@ const cors = require('cors');
 const errorController = require('./controllers/error');
 const User = require('./models/user');
 
-const MONGODB_URI  = 'mongodb://localhost:27017';
-
+// const MONGODB_URI  = 'mongodb://localhost:27017';
+const MONGODB_URI  = 'mongodb+srv://rward29:RideaBike6@cse341shop.hsotg.mongodb.net/cse341shop?retryWrites=true&w=majority'
 const app = express();
 const store= new MongoDBStore({
   uri: MONGODB_URI,
@@ -100,7 +100,7 @@ const options = {
   family: 4
 };
 
-const MONGODB_URL = process.env.MONGODB_URL || 'mongodb+srv://rward29:cse341nodejs@cluster0.hsotg.mongodb.net/test?retryWrites=true&w=majority'
+const MONGODB_URL = process.env.MONGODB_URL || 'mongodb+srv://rward29:RideaBike6@cse341shop.hsotg.mongodb.net/cse341shop?retryWrites=true&w=majority'
 
 mongoose
 .connect(MONGODB_URI)
