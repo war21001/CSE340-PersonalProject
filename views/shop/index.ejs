@@ -7,7 +7,7 @@
 
     <main>
         <div class="background-pic">
-        <% if (prods.length > 0) { %>
+        <!-- <% if (prods.length > 0) { %>
             <div class="grid">
                 <% for (let product of prods) { %>
                     <article class="card product-item">
@@ -31,13 +31,25 @@
                     </article>
                 <% } %>
             </div>
-            <section class="pagination">
-                 <!-- <a href="/?page=1">1</a>                 -->
-                <a href="/?page=<%= currentPage %>" class="active"><%= currentPage %></a>
-            </section>
-        <% } else { %>
+            <%- include('../includes/pagination.ejs', {currentPage: currentPage, nextPage: nextPage, previousPage: previousPage, lastPage: lastPage, hasNextPage: hasNextPage, hasPreviousPage: hasPreviousPage}) %> -->
+            <!-- <section class="pagination">            
+                <% if (currentPage !== 1 && previousPage !== 1) { %>
+                    <a href="?page=1">1</a>
+                <% } %> 
+                <% if (hasPreviousPage) { %>
+                    <a href="?page=<%= previousPage %>"><%= previousPage %></a>
+                <% } %>
+                    <a href="?page=<%= currentPage %>" class="active"><%= currentPage %></a>
+                <% if (hasNextPage) { %>
+                    <a href="?page=<%= nextPage %>"><%= nextPage %></a>
+                <% } %>
+                <% if (lastPage !== currentPage && nextPage !== lastPage) { %>
+                    <a href="?page=<%= lastPage %>"><%= lastPage %></a>
+                <% } %>            
+            </section> -->
+        <!-- <% } else { %>
             <h1>No Products Found!</h1>
-        <% } %>
+        <% } %> -->
     </div>
     </main>
 <%- include('../includes/end.ejs') %>
