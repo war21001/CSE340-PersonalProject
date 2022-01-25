@@ -36,8 +36,12 @@ exports.getProduct = (req, res, next) => {
 };
 
 exports.getIndex = (req, res, next) => {
-const page = +req.query.page;
-// console.log(page);
+  
+  const page = +req.query.page;
+  if(!page){
+    page=1;
+  }
+console.log(page);
 let totalItems;
 
 Product.find().countDocuments().then(numProducts =>{

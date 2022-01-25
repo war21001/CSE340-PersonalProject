@@ -5,6 +5,7 @@
     <body>
         <%- include('../includes/navigation.ejs') %>
         <main>
+        <div class="background-pic">
             <% if (orders.length <= 0) { %>
                 <h1>Nothing there!</h1>
             <% } else { %>
@@ -21,5 +22,6 @@
                     <% }); %>
                 </ul>
             <% } %>
+        </div>
         </main>
         <%- include('../includes/end.ejs') %>

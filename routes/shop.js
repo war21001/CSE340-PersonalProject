@@ -1,12 +1,15 @@
 const path = require('path');
 
 const express = require('express');
+const paginate = require('express-paginate');
 
 const shopController = require('../controllers/shop');
 const isAuth = require('../middleware/is-auth');
+const { appendFile } = require('fs');
 
 const router = express.Router();
 
+router.use(paginate.middleware());
 router.get('/', shopController.getIndex);
 
 router.get('/products', shopController.getProducts);

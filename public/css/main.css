@@ -12,21 +12,23 @@ body {
   font-size: 200%;
 }
 
-main {
+.background-pic {
   padding: 1rem; 
   margin: auto;  
-  background-image: url("../assets/priscilla-du-preez-dlxLGIy-2VU-unsplash.jpg");
-  height: 85vh;
-  width: 100%;
-  background-size: cover;
+  /* background-image: url("../assets/priscilla-du-preez-dlxLGIy-2VU-unsplash.jpg");
+  height: 100vh;
+  width: auto;
+  background-size: cover; */
 }
+
 
  .title{
    font-family: 'Sacramento', cursive;
    color: #4A4A48;
    padding-top: 2rem;
    padding-bottom: 1rem;
-   font-size: 200%;
+   font-size: 0%;
+   display: inline;
  }
  
 form {
@@ -171,6 +173,7 @@ a:hover{
 .grid {
   display: flex;
   flex-wrap: wrap;
+  /* flex-direction: column; */
   justify-content: space-around;
   align-items: stretch;
   
@@ -216,7 +219,7 @@ a:hover{
 
 .btn {
   display: inline-block;
-  padding: 0.1rem .5rem;
+  padding: 0.25rem 1rem;
   text-decoration: none;
   font: inherit;
   border: 2px solid #A4C2A5;
@@ -233,8 +236,8 @@ a:hover{
 }
 
 .btn.danger {
-  color: red;
-  border-color: red;
+  color: #a4c2a5;
+  border-color: #a4c2a5;
 }
 
 .btn.danger:hover,
@@ -252,30 +255,32 @@ a:hover{
   background: #00ffff;
   text-align: center;
 }
-
 .user-message--error{
-  border-color: red;  
-  background: rgb(251, 122, 122);
+  border-color: #4a4a48;  
+  background: #4a4a48;
+  color:#d8dad3;
 }
 
 .pagination{
   margin-top: .2rem;
   text-align: center;
+  /* background-color: #A4C2A5; */
 }
 .pagination a{
   text-decoration: none;
   color: #566246;
-  padding: 0.5rem 0.5rem 0.5rem 0.5rem;
-  /* border: 1.5px solid #566246; */
+  padding: .5px .5px;
+  border: 1.5px solid #566246;
   font-size: larger;
   margin: 0 .5rem;
+  height: 1rem;
   /* background-color: #F1F2EB; */
 }
 .pagination a:hover,
 .pagination a:active,
 .pagination a.active{
   text-decoration: none;
-  color: #A4C2A5;
+  color: #566246;
 }
 footer{
   color:#566246;
@@ -302,14 +307,36 @@ footer{
   #side-menu-toggle {
     display: none;
   }
-  .user-message {
-    width: 30rem; 
-    border: 1px solid #3865f8;  
-    background: #00ffff;
-  } 
+ 
   .user-message--error{
-    border-color: red;  
-    background: rgb(251, 122, 122);
+    width: 30rem; 
+    border-color: #4a4a48;  
+    background: #4a4a48;
+    color:#d8dad3;
+  }
+  
+  .grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: stretch;
+    
+  }
+  .background-pic {
+    padding: 1rem; 
+    margin: auto;  
+    background-image: url("../assets/priscilla-du-preez-dlxLGIy-2VU-unsplash.jpg");
+    height: 100vh;
+    width: auto;
+    background-size: cover;
+  }
+  .title{
+    font-family: 'Sacramento', cursive;
+    color: #4A4A48;
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+    font-size: 200%;
+    display: inline;
   }
 }
 
