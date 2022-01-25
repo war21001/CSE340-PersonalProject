@@ -27,6 +27,10 @@
                         <input type="hidden" name="_csrf" value="<%= csrfToken %>">
                         <button type="submit" class="btn">Order Now!</button>
                     </form>
+                    <form action="/products" method="GET">
+                        <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+                        <button type="submit" class="btn">Keep Shopping!</button>
+                    </form>
                 </div>
                 <br>
             <% } else { %>
