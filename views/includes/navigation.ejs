@@ -2,7 +2,11 @@
 <header class="main-header">
     <button id="side-menu-toggle">Menu</button>
     <nav class="main-header__nav">
+        <h1 class="title">Chloe's Closet</h1>
         <ul class="main-header__item-list">
+            <!-- <li class="main-header__item">
+                <p class="title">Chloe's Closet</p>
+            </li> -->
             <li class="main-header__item">
                 <a class="<%= path === '/' ? 'active' : '' %>" href="/">Shop</a>
             </li>
@@ -25,8 +29,8 @@
                     </a>
                 </li>
             <% } %>
-        </ul>
-        <ul class="main-header__item-list">
+        <!-- </ul>
+        <ul class="main-header__item-list"> -->
             <% if (!isAuthenticated) { %> 
             <li class = "main-header__item">
                 <a class="<%= path === '/login' ? 'active' : '' %>" href="/login">Login</a>
@@ -48,6 +52,8 @@
 
 <nav class="mobile-nav">
         <ul class="mobile-nav__item-list">
+            <li class="mobile-nav__item">
+                <h1 class="title">Chloe's Closet</h1></li>
                 <li class="mobile-nav__item">
                     <a class="<%= path === '/' ? 'active' : '' %>" href="/">Shop</a>
                 </li>
