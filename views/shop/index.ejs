@@ -7,7 +7,17 @@
 
     <main>
         <div class="background-pic">
-            <h2 class="tagline">Clothes for your best moments</h2>
+            <div class="tagline">
+                <h2>Clothes for your best moments</h2>
+            </div>
+                
+            <div class="tagline">
+                <form action="/products" method="GET">
+                    <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+                    <button type="submit" >Start Shopping!</button>
+                </form>
+            </div>
+            
         <!-- <% if (prods.length > 0) { %>
             <div class="grid">
                 <% for (let product of prods) { %>

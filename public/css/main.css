@@ -169,17 +169,40 @@ a:hover{
   z-index: 5;
   display: none;
 }
-.tagline{
-  font-family: 'Sacramento', cursive;
-   color: #4A4A48;
-   padding-top: 2rem;
-   padding-bottom: 1rem;
-  display:flex;
-  justify-content: center;
-   align-items: center;
-   margin-top: 100px;
+.tagline{  
+  /* display:flex; */
+  /* justify-content: center; */
+   /* align-items: center; */
+   /* margin: auto; */
+   /* padding-top: 2rem;
+   padding-bottom: 1rem; */
    /* align-items: center; */
 }
+.tagline h2 {
+  font-family: 'Sacramento', cursive;
+   color: #4A4A48;
+  
+   /* padding-top: 2rem;
+   padding-bottom: 1rem; */
+}
+.tagline button{
+  font-family: 'Sacramento', cursive;
+  color: #4A4A48;
+  font-size:xx-large;  
+  border: 2px solid #4A4A48;
+  background: #f1f2eb;
+  border-radius: 3px;
+  cursor: pointer;
+  background-color: transparent;
+  padding:.5rem;
+}
+.tagline button:hover,
+.tagline button:active {
+    background-color: #A4C2A5;
+    color: #f1f2eb;
+  }
+  
+
 .grid {
   display: flex;
   flex-wrap: wrap;
@@ -190,7 +213,7 @@ a:hover{
 }
 
 .card {
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+  box-shadow: 0 2px 8px #566246;
   background-color: #f1f2eb;
 }
 
