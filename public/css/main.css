@@ -282,10 +282,10 @@ a:hover{
 .user-message {
   margin: auto;
   width: 90%;
-  border: 1px solid #3865f8;  
+  border: 1px solid #4a4a48;  
   padding: .5rem;
   border-radius: 3px;
-  background: #00ffff;
+  background: #d8dad3;
   text-align: center;
 }
 .user-message--error{
@@ -381,6 +381,17 @@ footer{
      align-items: center;
      margin-top: 200px;
      /* align-items: center; */
+  }
+  .details,
+  .edit-product{
+    /* display:flex; */
+    width:30%;
+    height: auto;
+    justify-content: space-around;
+    margin: auto;
+    align-items: center;
+    padding:.5rem;
+
   }
 }
 

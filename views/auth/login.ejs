@@ -7,7 +7,7 @@
    <%- include('../includes/navigation.ejs') %>
 
     <main>
-        
+        <div class="background-pic">
         <% if (errorMessage) { %>
                 <div class="user-message user-message--error"><%= errorMessage %></div>
         <% } %>
@@ -27,6 +27,6 @@
             <br>
             <a href="/reset">Reset Password</a>
         </div>
-        
+        </div> 
     </main>
 <%- include('../includes/end.ejs') %>
